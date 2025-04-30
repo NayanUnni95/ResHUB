@@ -33,8 +33,10 @@ export default function RootLayout({
       >
         <Theme>
           <Header />
-          <SideBar />
-          {children}
+          <div className="px-4 py-8 md:px-6 md:py-10 container">
+            <SideBar />
+          </div>
+          {/* {children} */}
         </Theme>
       </body>
     </html>

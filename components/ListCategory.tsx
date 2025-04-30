@@ -6,10 +6,10 @@ export const CategoryLink = ({ id, name, redirect, emoji }: Category) => {
   return (
     <Link
       href={`/${redirect}`}
-      className="flex items-center gap-1 md:gap-3 group bg-background p-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors    bg-light-700/50 dark:bg-neutral-500/30"
+      className="flex items-center gap-1 md:gap-3 group bg-background p-2 mb-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors hover:bg-light-600/40 dark:hover:bg-neutral-600/20"
     >
-      <span>{emoji ?? '🤔'}</span>
-      <span className={'text-black dark:text-yellow-300 category'}>{name}</span>
+      <span>{emoji ?? '🔖'}</span>
+      <span className={'text-black category'}>{name}</span>
     </Link>
   )
 }
@@ -18,7 +18,7 @@ type Category = {
   id: Number
   name: String
   redirect: String
-  emoji: String
+  emoji: String | null
 }
 
 type ListCategoryProps = {
@@ -29,13 +29,14 @@ const ListCategory = ({ data }: ListCategoryProps) => {
     { id: 1, name: 'CSE', redirect: '/', emoji: '🧑🏼‍💻' },
     { id: 2, name: 'CE', redirect: '/', emoji: '👷🏻' },
     { id: 3, name: 'MEC', redirect: '/', emoji: '👨🏻‍🔧' },
+    { id: 4, name: 'EEE', redirect: '/', emoji: null },
   ]
   return (
-    <div>
-      {listDemoData?.map((category, index) => {
+    <div className="md:block flex">
+      {listDemoData?.map((category) => {
         return (
           <CategoryLink
-            key={index}
+            key={category.id}
             id={category.id}
             name={category.name}
             redirect={category.redirect}

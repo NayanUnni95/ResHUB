@@ -1,12 +1,14 @@
 # :globe_with_meridians: KTUHub
 
-#### The resource hub for ktu students were they can find
+#### A resource hub for KTU students and Tech enthusiasts to find:
 
 - Syllabus
 - Subject Study Materials
 - YT video links
 - Community Details
-- Out of syllabus resource
+- Open-Source Projects
+- AI Tools
+- More...
 
 ## Getting Started
 
