@@ -20,7 +20,14 @@ const navbar = () => {
             {/* Logo Component */}
             <span className="text-sm md:text-base">KTUHub</span>
           </Link>
-          <SearchForm />
+          <div
+            className="flex flex-col fixed left-1/2 -translate-x-1/2 top-0 z-50 rounded-xl h-[50px] w-[min(450px,calc(100%_-_90px))] 
+         bg-gradient-to-br dark:from-stone-800 dark:to-neutral-900 from-stone-50 to-light-400 translate-y-[8px] transition-multiple 
+         duration-300 border border-light-600 dark:border-neutral-800/70 focus-within:w-[calc(100%_-_8px)] focus-within:md:w-[600px] 
+         focus-within:h-[270px] group"
+          >
+            <SearchForm />
+          </div>
           <div className="hidden md:flex flex items-center gap-2">
             <ModeToggle />
             <Link

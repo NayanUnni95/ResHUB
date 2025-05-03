@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'ktuhub',
-  description: 'ktuhub',
+  title: 'KTUHub',
+  description:
+    'A resource hub for KTU students and Tech enthusiasts to find - Syllabus, Subject_Study_Materials, YT_video_links, Community_Details, Open_Source_Projects, AI_Tools, More...',
 }
 
 export default function RootLayout({
@@ -35,8 +36,8 @@ export default function RootLayout({
           <Header />
           <div className="px-4 py-8 md:px-6 md:py-10 container">
             <SideBar />
+            <main className="ml-0 md:ml-60">{children}</main>
           </div>
-          {/* {children} */}
         </Theme>
       </body>
     </html>
