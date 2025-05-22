@@ -18,7 +18,7 @@ const navbar = () => {
             aria-label="Link to home page"
           >
             {/* Logo Component */}
-            <span className="text-sm md:text-base">KTUHub</span>
+            <span className="text-sm md:text-base">ResHUB</span>
           </Link>
           <div
             className="flex flex-col fixed left-1/2 -translate-x-1/2 top-0 z-50 rounded-xl h-[50px] w-[min(450px,calc(100%_-_90px))] 
@@ -31,7 +31,7 @@ const navbar = () => {
           <div className="hidden md:flex flex items-center gap-2">
             <ModeToggle />
             <Link
-              href="https://github.com/NayanUnni95/KTUHub"
+              href="https://github.com/NayanUnni95/ResHUB"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="GitHub repository"
@@ -40,7 +40,7 @@ const navbar = () => {
                 <Icon name="github" />
               </Button>
             </Link>
-            <Link href="https://github.com/NayanUnni95/KTUHub">
+            <Link href="https://github.com/NayanUnni95/ResHUB">
               <Button size="3" variant="soft" color="green">
                 <SendIcon className="size-4 mr-1x" />
                 Contribute

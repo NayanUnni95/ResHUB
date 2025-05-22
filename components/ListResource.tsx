@@ -2,6 +2,7 @@
 import React from 'react'
 import img from '@/assets/images/Picture-Placeholder.png'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowUpRight, PinIcon } from 'lucide-react'
 
 type ResourceItemProps = {
@@ -48,7 +49,7 @@ const ResourceItem = ({
         </div>
       </div>
       <div className="flex justify-between">
-        <a
+        <Link
           className="group flex gap-1 items-center text-sm text-blue-700 dark:text-anchor transition-colors duration-300 ease-in-out resource-item hover:underline underline-offset-2"
           href={url}
           target="_blank"
@@ -56,7 +57,7 @@ const ResourceItem = ({
         >
           <span>Go to resource</span>
           <ArrowUpRight className="size-4 duration-200 group-hover:translate-x-[1.5px] group-hover:opacity-100" />
-        </a>
+        </Link>
         <div className="relative">
           <div className="cursor-pointer">
             <PinIcon
@@ -88,7 +89,7 @@ const ListResource = () => {
       url: 'sem2',
       summary: 'cse semester2 all resources',
       image: null,
-      order: 2,
+      order: 1,
       placeholder: 'Sem2',
     },
     {
@@ -97,7 +98,7 @@ const ListResource = () => {
       url: 'sem3',
       summary: 'cse semester3 all resources',
       image: null,
-      order: 3,
+      order: 2,
       placeholder: 'Sem3',
     },
     {
@@ -106,7 +107,7 @@ const ListResource = () => {
       url: 'sem4',
       summary: 'cse semester4 all resources',
       image: null,
-      order: 4,
+      order: 2,
       placeholder: 'Sem4',
     },
     {
@@ -115,7 +116,7 @@ const ListResource = () => {
       url: 'sem5',
       summary: 'cse semester5 all resources',
       image: null,
-      order: 5,
+      order: 3,
       placeholder: 'Sem5',
     },
     {
@@ -124,7 +125,7 @@ const ListResource = () => {
       url: 'sem6',
       summary: 'cse semester6 all resources',
       image: null,
-      order: 6,
+      order: 3,
       placeholder: 'Sem6',
     },
     {
@@ -133,7 +134,7 @@ const ListResource = () => {
       url: 'sem7',
       summary: 'cse semester7 all resources',
       image: null,
-      order: 7,
+      order: 4,
       placeholder: 'Sem7',
     },
     {
@@ -142,7 +143,7 @@ const ListResource = () => {
       url: 'sem8',
       summary: 'cse semester8 all resources',
       image: null,
-      order: 8,
+      order: 4,
       placeholder: 'Sem8',
     },
   ]

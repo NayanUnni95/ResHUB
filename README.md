@@ -1,6 +1,6 @@
-# :globe_with_meridians: KTUHub
+# :globe_with_meridians: ResHUB
 
-#### A resource hub for KTU students and Tech enthusiasts to find:
+#### The Ultimate resource Hub for Students & Tech Enthusiasts:
 
 - Syllabus
 - Subject Study Materials
@@ -15,13 +15,13 @@
 Install the required dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 First, run the development server:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
