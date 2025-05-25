@@ -5,9 +5,9 @@ import ListCategory from './ListCategory'
 
 const SideBar = () => {
   return (
-    <aside className="w-full md:fixed md:h-full md:w-56 overflow-y-auto scrollbar-hide mb-8 md:mb-0">
+    <aside className="w-full md:fixed md:h-full md:w-56 overflow-y-auto scrollbar-hide md:mb-8 no-scrollbar">
       <nav className="md:mb-32 md:pb-2">
-        <div className="flex space-y-1 overflow-y-auto md:flex-col md:overflow-y-visible pt-0 px-0.5 md:px-0">
+        <div className="flex space-y-1 overflow-y-auto md:flex-col md:overflow-y-visible pt-0 px-0.5 md:px-0 no-scrollbar">
           <OptionHeader title="Category" />
           <ListCategory data={[]} />
           <OptionHeader title="Community" />

@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react'
 import { MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
@@ -21,7 +22,6 @@ const ModeToggle = () => {
         <DropdownMenu.Item onClick={() => setTheme('dark')}>
           Dark
         </DropdownMenu.Item>
-        <DropdownMenu.Separator />
         <DropdownMenu.Item onClick={() => setTheme('system')}>
           System
         </DropdownMenu.Item>

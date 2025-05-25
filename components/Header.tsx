@@ -1,4 +1,6 @@
 'use client'
+
+import { Righteous } from 'next/font/google'
 import Link from 'next/link'
 import { Button } from '@radix-ui/themes'
 import { SendIcon } from 'lucide-react'

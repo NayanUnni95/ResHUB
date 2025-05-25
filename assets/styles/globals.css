@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -12,13 +15,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-} */
-/* @layer base {
+}
+@layer base {
   :root {
     --background: 59 40% 96.1%;
     --foreground: 0 0% 3.9%;
@@ -73,7 +76,18 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-} */
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
 body {
   background: var(--background);
