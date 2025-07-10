@@ -1,11 +1,9 @@
 'use client'
 
-import { Righteous } from 'next/font/google'
 import Link from 'next/link'
-import { Button } from '@radix-ui/themes'
 import { SendIcon } from 'lucide-react'
 import { Icon } from './Icons'
-import ModeToggle from './ModeToggle'
+// import ModeToggle from './ModeToggle'
 import SearchForm from './SearchForm'
 
 const navbar = () => {
@@ -31,22 +29,25 @@ const navbar = () => {
             <SearchForm />
           </div>
           <div className="hidden md:flex flex items-center gap-2">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <Link
               href="https://github.com/NayanUnni95/ResHUB"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="GitHub repository"
             >
-              <Button size="3" variant="solid" color="gray" highContrast>
+              <button className="flex px-4 py-2 rounded-lg bg-gradient-to-r from-sky-500/20 to-blue-500/20 border border-sky-400/30 text-sky-300 font-medium backdrop-blur-sm shadow-lg">
                 <Icon name="github" />
-              </Button>
+              </button>
             </Link>
-            <Link href="https://github.com/NayanUnni95/ResHUB">
-              <Button size="3" variant="soft" color="green">
-                <SendIcon className="size-4 mr-1x" />
-                Contribute
-              </Button>
+            <Link
+              href="https://github.com/NayanUnni95/ResHUB"
+              target="_blank"
+              aria-label="Project contribution"
+            >
+              <button className="flex px-4 py-2 rounded-lg bg-gradient-to-r from-sky-500/20 to-blue-500/20 border border-sky-400/30 text-sky-300 font-medium backdrop-blur-sm shadow-lg">
+                <SendIcon className="size-6 mr-1x" />
+              </button>
             </Link>
           </div>
         </div>

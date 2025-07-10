@@ -1,8 +1,9 @@
 'use client'
-import React from 'react'
-import { Link } from 'next-view-transitions'
 
-export const CategoryLink = ({ id, name, redirect, emoji }: Category) => {
+import React from 'react'
+import Link from 'next/link'
+
+export const CategoryLink = ({ name, redirect, emoji }: Category) => {
   return (
     <Link
       href={`/${redirect}`}
@@ -15,10 +16,10 @@ export const CategoryLink = ({ id, name, redirect, emoji }: Category) => {
 }
 
 type Category = {
-  id: Number
-  name: String
-  redirect: String
-  emoji: String | null
+  id: number
+  name: string
+  redirect: string
+  emoji: string | null
 }
 
 type ListCategoryProps = {

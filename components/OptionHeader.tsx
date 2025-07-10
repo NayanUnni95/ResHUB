@@ -2,7 +2,7 @@
 import React from 'react'
 
 interface TitleProps {
-  title: String
+  title: string
 }
 
 const OptionHeader = ({ title }: TitleProps) => {

@@ -42,7 +42,7 @@ export default function Home() {
               className="max-w-3xl mx-auto text-xl md:text-2xl font-light text-gray-300 mb-12 leading-relaxed"
             >
               Your central hub for tech tools, knowledge, and innovation.
-              Whether you're a developer, student, entrepreneur, or curious
+              Whether you&apos;re a developer, student, entrepreneur, or curious
               learner, ResHUB offers a wide range of resources including AI
               tools, open-source projects, startup SaaS platforms, community
               insights, and more.

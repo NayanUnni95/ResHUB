@@ -16,13 +16,13 @@ type ResourceItemProps = {
 }
 
 const ResourceItem = ({
-  id,
+  // id,
   title,
   url,
   summary,
   image,
   order,
-  placeholder,
+  // placeholder,
 }: ResourceItemProps) => {
   return (
     <div className="rounded-lg shadow-sm border transition-colors duration-300 ease-in-out resource-item grid grid-rows-subgrid row-span-2 gap-5 p-3  border-orange-500/30 bg-orange-400/30 hover:bg-orange-600/30 dark:border-orange-200/40 dark:bg-orange-200/5 dark:hover:bg-orange-400/5">
