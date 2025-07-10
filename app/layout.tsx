@@ -7,6 +7,7 @@ import SideBar from '@/components/SideBar'
 import Header from '@/components/Header'
 import '@radix-ui/themes/styles.css'
 import '@/assets/styles/globals.css'
+import Footer from '@/components/Footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -42,9 +43,12 @@ export default function RootLayout({
         >
           <Theme>
             <Header />
-            <div className="px-4 py-8 md:px-6 md:py-10">
+            <div>
               <SideBar />
-              <Container>{children}</Container>
+              <Container>
+                {children}
+                <Footer />
+              </Container>
             </div>
           </Theme>
         </ThemeProvider>

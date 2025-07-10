@@ -4,7 +4,7 @@ import ListResource from './ListResource'
 
 const Category = () => {
   return (
-    <div>
+    <div className="m-4">
       <ListResource />
     </div>
   )

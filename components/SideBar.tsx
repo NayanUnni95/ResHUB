@@ -5,8 +5,8 @@ import ListCategory from './ListCategory'
 
 const SideBar = () => {
   return (
-    <aside className="w-full md:fixed md:h-full md:w-56 overflow-y-auto scrollbar-hide md:mb-8 no-scrollbar">
-      <nav className="md:mb-32 md:pb-2">
+    <aside className="w-full md:fixed md:h-full md:w-56 overflow-y-auto scrollbar-hide md:mb-8 no-scrollbar py-5 pl-5">
+      <nav className="md:mb-20">
         <div className="flex space-y-1 overflow-y-auto md:flex-col md:overflow-y-visible pt-0 px-0.5 md:px-0 no-scrollbar">
           <OptionHeader title="Category" />
           <ListCategory data={[]} />
