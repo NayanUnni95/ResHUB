@@ -39,7 +39,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 1 }}
-              className="max-w-3xl mx-auto text-xl md:text-2xl font-light text-gray-300 mb-12 leading-relaxed"
+              className="max-w-3xl mx-auto text-xl md:text-2xl font-light text-[var(--text-desc)] mb-12 leading-relaxed"
             >
               Your central hub for tech tools, knowledge, and innovation.
               Whether you&apos;re a developer, student, entrepreneur, or curious

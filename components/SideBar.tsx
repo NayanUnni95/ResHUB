@@ -5,10 +5,10 @@ import ListCategory from './ListCategory'
 
 const SideBar = () => {
   const listDemoData = [
-    { id: 1, name: 'CSE', redirect: '/', emoji: '🧑🏼‍💻' },
-    { id: 2, name: 'CE', redirect: '/', emoji: '👷🏻' },
-    { id: 3, name: 'MEC', redirect: '/', emoji: '👨🏻‍🔧' },
-    { id: 4, name: 'EEE', redirect: '/', emoji: null },
+    { id: 1, name: 'CSE', redirect: '/cse', emoji: '🧑🏼‍💻' },
+    { id: 2, name: 'CE', redirect: '/ce', emoji: '👷🏻' },
+    { id: 3, name: 'ME', redirect: '/me', emoji: '👨🏻‍🔧' },
+    { id: 4, name: 'EEE', redirect: '/eee', emoji: null },
   ]
   const initialData = [
     {

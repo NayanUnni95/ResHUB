@@ -1,30 +1,35 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+
+import { Category, ListCategoryProps } from '@/types'
 
 export const CategoryLink = ({ name, redirect, emoji }: Category) => {
+  const router = useRouter()
+
+  const normalizedRedirect = redirect.startsWith('/')
+    ? redirect
+    : `${redirect.replace(/^\/+/, '')}`
+
+  const handleNavigate = () => {
+    try {
+      router.push(normalizedRedirect)
+    } catch (e) {
+      console.error('Error while navigate: ', e)
+    }
+  }
   return (
-    <Link
-      href={`/${redirect}`}
+    <div
+      onClick={handleNavigate}
       className="flex items-center gap-1 md:gap-3 group bg-black/5 p-2 md:mb-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors hover:bg-light-600/40 dark:hover:bg-neutral-600/20"
     >
       <span>{emoji ?? '🔖'}</span>
-      <span className={'text-black category'}>{name}</span>
-    </Link>
+      <span className={'text-[var(--text-title)] category'}>{name}</span>
+    </div>
   )
 }
 
-type Category = {
-  id: number
-  name: string
-  redirect: string
-  emoji: string | null
-}
-
-type ListCategoryProps = {
-  data: Category[] | undefined
-}
 const ListCategory = ({ data }: ListCategoryProps) => {
   return (
     <div className="md:block flex items-center">

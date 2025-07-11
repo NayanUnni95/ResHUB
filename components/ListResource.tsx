@@ -1,19 +1,12 @@
 'use client'
+
 import React from 'react'
-import img from '@/assets/images/Picture-Placeholder.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, PinIcon } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
-type ResourceItemProps = {
-  id: string
-  title: string
-  url: string
-  summary: string
-  image: string | null
-  order: number
-  placeholder: string | null
-}
+import img from '@/assets/images/Picture-Placeholder.png'
+import { ResourceItemProps } from '@/types'
 
 const ResourceItem = ({
   // id,
@@ -23,9 +16,10 @@ const ResourceItem = ({
   image,
   order,
   // placeholder,
+  relative,
 }: ResourceItemProps) => {
   return (
-    <div className="rounded-lg shadow-sm border transition-colors duration-300 ease-in-out resource-item grid grid-rows-subgrid row-span-2 gap-5 p-3  border-orange-500/30 bg-orange-400/30 hover:bg-orange-600/30 dark:border-orange-200/40 dark:bg-orange-200/5 dark:hover:bg-orange-400/5">
+    <div className="rounded-lg shadow-sm border transition-colors duration-300 ease-in-out resource-item grid grid-rows-subgrid row-span-2 gap-5 p-3 border-sky-500/30 bg-sky-400/30 hover:bg-sky-600/30 dark:border-sky-200/40 dark:bg-sky-200/5 dark:hover:bg-sky-400/5">
       <div className="flex flex-col gap-3">
         <div className="relative w-full h-[160px] rounded-md overflow-hidden border">
           <Image
@@ -43,7 +37,7 @@ const ResourceItem = ({
           <h2 className="text-base md:text-lg font-semibold text-balance">
             {title}
           </h2>
-          <p className="text-sm text-gray-700 dark:text-link line-clamp-4 text-pretty">
+          <p className="text-sm text-gray-700 dark:text-white/60 line-clamp-4 text-pretty">
             {summary}
           </p>
         </div>
@@ -56,15 +50,21 @@ const ResourceItem = ({
           rel="noopener noreferrer"
         >
           <span>Go to resource</span>
-          <ArrowUpRight className="size-4 duration-200 group-hover:translate-x-[1.5px] group-hover:opacity-100" />
+          <ArrowUpRight className="size-4 duration-200 group-hover:translate-x-[1.5px] group-hover:opacity-100 group-hover:translate-y-[-1.5px]" />
         </Link>
         <div className="relative">
-          <div className="cursor-pointer">
-            <PinIcon
-              className={
-                'size-[22px] mr-2 hover:scale-110 text-light-800 dark:text-[#FFC107]'
-              }
-            />
+          <div className="cursor-pointer flex">
+            {relative &&
+              relative.map((value, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="cursor-pointer flex border text-[12px] px-3 py-1 mx-[3px] rounded-[1rem] border-gray-500/30  bg-gray-400/30 hover:bg-gray-600/30 dark:border-gray-200/40 dark:bg-gray-200/5 dark:hover:bg-gray-400/5 shadow-sm"
+                  >
+                    {value}
+                  </div>
+                )
+              })}
           </div>
         </div>
       </div>
@@ -82,6 +82,7 @@ const ListResource = () => {
       image: null,
       order: 1,
       placeholder: 'Sem1',
+      relative: ['Engg', 'Academics'],
     },
     {
       id: 'sem2',
@@ -91,6 +92,7 @@ const ListResource = () => {
       image: null,
       order: 1,
       placeholder: 'Sem2',
+      relative: ['Engg', 'Academics'],
     },
     {
       id: 'sem3',
@@ -100,6 +102,7 @@ const ListResource = () => {
       image: null,
       order: 2,
       placeholder: 'Sem3',
+      relative: ['Engg', 'Academics'],
     },
     {
       id: 'sem4',
@@ -109,6 +112,7 @@ const ListResource = () => {
       image: null,
       order: 2,
       placeholder: 'Sem4',
+      relative: ['Engg', 'Academics'],
     },
     {
       id: 'sem5',
@@ -118,6 +122,7 @@ const ListResource = () => {
       image: null,
       order: 3,
       placeholder: 'Sem5',
+      relative: null,
     },
     {
       id: 'sem6',
@@ -127,6 +132,7 @@ const ListResource = () => {
       image: null,
       order: 3,
       placeholder: 'Sem6',
+      relative: ['Engg', 'Academics'],
     },
     {
       id: 'sem7',
@@ -136,6 +142,7 @@ const ListResource = () => {
       image: null,
       order: 4,
       placeholder: 'Sem7',
+      relative: ['Engg', 'Academics'],
     },
     {
       id: 'sem8',
@@ -145,24 +152,32 @@ const ListResource = () => {
       image: null,
       order: 4,
       placeholder: 'Sem8',
+      relative: ['Engg', 'Academics'],
     },
   ]
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 py-6">
-      {data.map(({ id, title, url, summary, image, placeholder }, index) => {
-        return (
-          <ResourceItem
-            order={index}
-            key={id}
-            title={title}
-            url={url}
-            summary={summary}
-            image={image}
-            placeholder={placeholder}
-            id={id}
-          />
-        )
-      })}
+      {data &&
+        data.map(
+          (
+            { id, title, url, summary, image, placeholder, relative },
+            index
+          ) => {
+            return (
+              <ResourceItem
+                order={index}
+                key={id}
+                title={title}
+                url={url}
+                summary={summary}
+                image={image}
+                placeholder={placeholder}
+                id={id}
+                relative={relative}
+              />
+            )
+          }
+        )}
     </div>
   )
 }

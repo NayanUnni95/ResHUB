@@ -26,6 +26,8 @@
   --border: 0 0% 14.9%;
   --input: 0 0% 14.9%;
   --ring: 0 0% 83.1%;
+  --text-title: #bbbbbb;
+  --text-desc: #a8a8a89d;
 }
 
 @layer utilities {
