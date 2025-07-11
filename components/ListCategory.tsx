@@ -7,7 +7,7 @@ export const CategoryLink = ({ name, redirect, emoji }: Category) => {
   return (
     <Link
       href={`/${redirect}`}
-      className="flex items-center gap-1 md:gap-3 group bg-background p-2 md:mb-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors hover:bg-light-600/40 dark:hover:bg-neutral-600/20"
+      className="flex items-center gap-1 md:gap-3 group bg-black/5 p-2 md:mb-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors hover:bg-light-600/40 dark:hover:bg-neutral-600/20"
     >
       <span>{emoji ?? '🔖'}</span>
       <span className={'text-black category'}>{name}</span>
@@ -26,15 +26,9 @@ type ListCategoryProps = {
   data: Category[] | undefined
 }
 const ListCategory = ({ data }: ListCategoryProps) => {
-  const listDemoData = [
-    { id: 1, name: 'CSE', redirect: '/', emoji: '🧑🏼‍💻' },
-    { id: 2, name: 'CE', redirect: '/', emoji: '👷🏻' },
-    { id: 3, name: 'MEC', redirect: '/', emoji: '👨🏻‍🔧' },
-    { id: 4, name: 'EEE', redirect: '/', emoji: null },
-  ]
   return (
     <div className="md:block flex items-center">
-      {listDemoData?.map((category) => {
+      {data?.map((category) => {
         return (
           <CategoryLink
             key={category.id}

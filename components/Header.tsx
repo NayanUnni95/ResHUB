@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { SendIcon } from 'lucide-react'
 import { Icon } from './Icons'
-// import ModeToggle from './ModeToggle'
+import ModeToggle from './ModeToggle'
 import SearchForm from './SearchForm'
 
 const navbar = () => {
@@ -18,7 +18,7 @@ const navbar = () => {
             aria-label="Link to home page"
           >
             {/* Logo Component */}
-            <span className="text-sm md:text-base">ResHUB</span>
+            {/* <span className="text-sm md:text-base">ResHUB</span> */}
           </Link>
           <div
             className="flex flex-col fixed left-1/2 -translate-x-1/2 top-0 z-50 rounded-xl h-[50px] w-[min(450px,calc(100%_-_90px))] 
@@ -29,7 +29,7 @@ const navbar = () => {
             <SearchForm />
           </div>
           <div className="hidden md:flex flex items-center gap-2">
-            {/* <ModeToggle /> */}
+            <ModeToggle />
             <Link
               href="https://github.com/NayanUnni95/ResHUB"
               target="_blank"
