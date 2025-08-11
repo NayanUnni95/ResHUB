@@ -22,7 +22,7 @@ export const CategoryLink = ({ name, redirect, emoji }: Category) => {
   return (
     <div
       onClick={handleNavigate}
-      className="flex items-center gap-1 md:gap-3 group bg-black/5 p-2 md:mb-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors hover:bg-light-600/40 dark:hover:bg-neutral-600/20"
+      className="flex items-center gap-1 md:gap-3 group bg-black/5 p-2 md:mb-2 rounded-md text-sm md:text-[15px] leading-normal text-light-900 dark:text-[#bdbdbd] transition-colors hover:bg-light-600/40 dark:bg-neutral-600/20 dark:hover:bg-neutral-600/50"
     >
       <span>{emoji ?? '🔖'}</span>
       <span className={'text-[var(--text-title)] category'}>{name}</span>

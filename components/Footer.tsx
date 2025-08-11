@@ -6,7 +6,7 @@ function Footer() {
     <div className="w-full flex items-center justify-center">
       <div className="my-10">
         Developed with 🩵 by{' '}
-        <Link className="text-sky-300" href="https://github.com/NayanUnni95/">
+        <Link className="hover:text-white text-sky-300 hover:underline" href="https://github.com/NayanUnni95/">
           this Guy
         </Link>
       </div>
